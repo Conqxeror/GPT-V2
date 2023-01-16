@@ -1,6 +1,3 @@
-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
-
-
   npm start
     Starts the development server.
 
