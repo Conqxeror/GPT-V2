@@ -1,14 +1,11 @@
-//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
-//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
-
 const { Configuration, OpenAIApi } = require("openai");
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const configuration = new Configuration({
-    organization: "YOUR-ORGANIZATION",
-    apiKey: "YOUR_API_KEY",
+    organization: "org-f4VUXXTGQd7sF9HHimnjyIPW",
+    apiKey: "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",
 });
 
 const openai = new OpenAIApi(configuration);
@@ -26,7 +23,7 @@ app.post('/', async (req, res) => {
         const response = await openai.createCompletion({
             model: `${currentModel}`,
             prompt: `${message}`,
-            max_tokens: 100,
+            max_tokens: 900,
             temperature: 0.5,
         });
         res.json({
